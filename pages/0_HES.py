@@ -40,9 +40,9 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 #Veri input
 
-ortalama_sıcaklık = pd.read_csv('C:/Users/hp/Desktop/map_app/data_manipulation/HES/temperature_mean.csv')
-minimum_sıcaklık = pd.read_csv('C:/Users/hp/Desktop/map_app/data_manipulation/HES/temperature_min.csv')
-maksimum_sıcaklık= pd.read_csv('C:/Users/hp/Desktop/map_app/data_manipulation/HES/temperature_max.csv')
+ortalama_sıcaklık = pd.read_csv('data_manipulation/HES/temperature_mean.csv')
+minimum_sıcaklık = pd.read_csv('data_manipulation/HES/temperature_min.csv')
+maksimum_sıcaklık= pd.read_csv('data_manipulation/HES/temperature_max.csv')
 yagis= pd.read_csv('C:/Users/hp/Desktop/map_app/data_manipulation/HES/precipitation_sum.csv')
 kar= pd.read_csv('C:/Users/hp/Desktop/map_app/data_manipulation/HES/snowfall_sum.csv')
 buharlasma=pd.read_csv('C:/Users/hp/Desktop/map_app/data_manipulation/HES/et0_fao_evapotranspiration_sum.csv')
