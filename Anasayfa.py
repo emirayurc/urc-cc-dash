@@ -30,7 +30,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 def main():
     # Setting up the layout
-    col1, col2 = st.columns([0.15,0.75], gap="small")
+    col1, col2 = st.columns([0.1,0.9], gap="medium")
 
     with col1:
         st.image('https://urclimate.com/wp-content/uploads/2023/12/LOGO_UrClimate_4-1.png', width=130)
