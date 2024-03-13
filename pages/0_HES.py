@@ -76,7 +76,7 @@ yıl_2046_2049 = yıllık_ortalamalar.loc['2024':'2049'].mean()
 # Farkı hesapla
 fark = yıl_2046_2049 - yıl_2020_2023
 
-col1.metric("Yıllık Ort. Sıcaklık", f"{yıl_2046_2049[0].round(2)} °C", fark[0].round(2))
+col1.metric("Yıllık Ort. Sıcaklık", f"🌡️{yıl_2046_2049[0].round(2)} °C", fark[0].round(2))
 
 yagis['date'] = pd.to_datetime(yagis['date'])
 yıllık_ortalama_yagis = yagis.groupby(yagis['date'].dt.year)['precipitation_sum'].mean().reset_index()
