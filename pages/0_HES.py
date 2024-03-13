@@ -139,7 +139,7 @@ with tab1:
                           yaxis_title='Sıcaklık (°C)')
         
         # Grafiği göster
-       st.plotly_chart(fig)
+       st.plotly_chart(fig,use_container_width=True)
        container = st.container(border=True)
        container.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
    with col2:
@@ -198,7 +198,7 @@ with tab2:
         # Eğilim çizgisini grafiğe ekle
        fig.add_scatter(x=yillik_ortalama['yil'], y=p(yillik_ortalama['yil']), mode='lines',line=dict(color='red'),name='Eğilim Çizgisi') 
          # Grafiği göster
-       st.plotly_chart(fig)
+       st.plotly_chart(fig,use_container_width=True)
        
        container = st.container(border=True)
        container.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
@@ -225,7 +225,7 @@ with tab2:
        fig.add_scatter(x=yillik_ortalama['yil'], y=p(yillik_ortalama['yil']), mode='lines',line=dict(color='red'),name='Eğilim Çizgisi') 
        
        fig.update_layout(xaxis_title='Yıl', yaxis_title='Gün')
-       st.plotly_chart(fig)
+       st.plotly_chart(fig,use_container_width=True)
        container2 = st.container(border=True)
        container2.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
 
@@ -264,7 +264,7 @@ with tab3:
            # Eğilim çizgisini grafiğe ekle
            fig.add_scatter(x=yillik_ortalama['yil'], y=p(yillik_ortalama['yil']), mode='lines',line=dict(color='red'),name='Eğilim Çizgisi') 
             # Grafiği göster
-           st.plotly_chart(fig)
+           st.plotly_chart(fig,use_container_width=True)
        
        with tab2:
                kar["ay"]=kar["date"].dt.month
@@ -284,7 +284,7 @@ with tab3:
                z = np.polyfit(average_snowfall_by_year['date'], average_snowfall_by_year['snowfall_sum'], 1)
                p = np.poly1d(z)
                fig.add_scatter(x=average_snowfall_by_year['date'], y=p(average_snowfall_by_year['date']), mode='lines', line=dict(color='red'), name='Eğilim Çizgisi')           
-               st.plotly_chart(fig)
+               st.plotly_chart(fig,use_container_width=True)
        container = st.container(border=True)
        container.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")        
     
@@ -306,7 +306,7 @@ with tab3:
             
             # Eğilim çizgisini grafiğe ekleme
            fig.add_trace(go.Scatter(x=kar_yagdi_sayisi['date'], y=p(kar_yagdi_sayisi['date']), mode='lines', line=dict(color='red'), name='Eğilim Çizgisi'))
-           st.plotly_chart(fig)
+           st.plotly_chart(fig,use_container_width=True)
        with tab2:
            gunluk_kar = kar.groupby('date')['snowfall_sum'].sum().reset_index()
 
@@ -323,7 +323,7 @@ with tab3:
 
 # Eğilim çizgisini grafiğe ekleme
            fig.add_trace(go.Scatter(x=gunluk_max_kar['date'], y=p(gunluk_max_kar['date']), mode='lines', line=dict(color='red'), name='Eğilim Çizgisi'))
-           st.plotly_chart(fig)   
+           st.plotly_chart(fig,use_container_width=True)   
 
        container3 = st.container(border=True)
        container3.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
@@ -435,7 +435,7 @@ with tab4 :
     )
 
  # Grafiği gösterelim
-    st.plotly_chart(fig)   
+    st.plotly_chart(fig,use_container_width=True)   
 
 with tab5 :
     soil_m['date'] = pd.to_datetime(soil_m['date'])
@@ -458,4 +458,4 @@ with tab5 :
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=kuraklık.index, y=kuraklık['kuraklık'], mode='lines', name='Kuraklık İndeksi'))
     fig.update_layout(title='Yıllık Kuraklık İndeksi', xaxis_title='Yıl', yaxis_title='Kuraklık İndeksi')
-    st.plotly_chart(fig)   
+    st.plotly_chart(fig,use_container_width=True)   
