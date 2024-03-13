@@ -40,7 +40,7 @@ def main():
         st.title('UrClimate İklim Risk Takip Ekranı', anchor=False)
         
     # Create a wide map object
-    st.divider()
+   
     folium_map = folium.Map(location=[39, 35.5], zoom_start=6)
 
     # Define locations, labels, and page URLs
