@@ -15,7 +15,8 @@ from streamlit_js_eval import streamlit_js_eval
 import numpy as np
 # Setting Streamlit page configuration
 st.set_page_config(
-    page_title="UrClimate",
+    page_title="UrClimate HES",
+    page_icon="🌊",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
