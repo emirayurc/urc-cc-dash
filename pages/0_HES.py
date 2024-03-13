@@ -51,9 +51,16 @@ kar= pd.read_csv('data_manipulation/HES/snowfall_sum.csv')
 buharlasma=pd.read_csv('data_manipulation/HES/et0_fao_evapotranspiration_sum.csv')
 soil_m=pd.read_csv('data_manipulation/HES/soil_moisture_0_to_10cm_mean.csv')
 #Başlık
-st.title("HES")
-if st.button("Haritaya Geri Dön"):
-    st.switch_page("Anasayfa.py")
+col1, col2 = st.columns([0.1,0.9], gap="medium")
+
+with col1:
+    st.title("Hidroelektrik Santrali")
+    
+with col2:
+    if st.button("Haritaya Geri Dön"):
+        st.switch_page("Anasayfa.py")
+
+
 #Artış Azalışlar
 col1, col2, col3 = st.columns(3)
 
