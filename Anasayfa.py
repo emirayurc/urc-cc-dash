@@ -33,7 +33,7 @@ def main():
     col1, col2 = st.columns(2, gap="small")
 
     with col1:
-        st.image('https://urclimate.com/wp-content/uploads/2023/12/LOGO_UrClimate_4-1.png')
+        st.image('https://urclimate.com/wp-content/uploads/2023/12/LOGO_UrClimate_4-1.png', width=100)
     
     with col2:
         st.title('UrClimate İklim Risk Demo Dashboard', anchor=False)
