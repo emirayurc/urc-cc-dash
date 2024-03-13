@@ -51,7 +51,7 @@ buharlasma=pd.read_csv('data_manipulation/HES/et0_fao_evapotranspiration_sum.csv
 soil_m=pd.read_csv('data_manipulation/HES/soil_moisture_0_to_10cm_mean.csv')
 #Başlık
 st.title("HES")
-if st.button("Home"):
+if st.button("Haritaya Geri Dön"):
     st.switch_page("Anasayfa.py")
 #Artış Azalışlar
 col1, col2, col3 = st.columns(3)
