@@ -54,7 +54,7 @@ soil_m=pd.read_csv('data_manipulation/HES/soil_moisture_0_to_10cm_mean.csv')
 col1, col2 = st.columns([0.9,0.1], gap="medium")
 
 with col1:
-    st.title("Hidroelektrik Santrali")
+    st.title("🌊 Hidroelektrik Santrali")
     
 with col2:
     if st.button("Haritaya Geri Dön"):
