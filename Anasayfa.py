@@ -33,13 +33,13 @@ def main():
     col1, mid, col2, col3 = st.columns([1, 1, 15, 1])
 
     with col1:
-        st.image('https://urclimate.com/wp-content/uploads/2023/12/LOGO_UrClimate_4-1.png',  use_container_width=True)
+        st.image('https://urclimate.com/wp-content/uploads/2023/12/LOGO_UrClimate_4-1.png', width=150)
     
     with col2:
-        st.title('UrClimate İklim Risk Demo Dashboard', anchor=False,  use_container_width=True)
+        st.title('UrClimate İklim Risk Demo Dashboard', anchor=False)
     
     with col3:
-        if st.button("Haritaya Geri Dön", use_container_width=True):
+        if st.button("Haritaya Geri Dön"):
             streamlit_js_eval(js_expressions="parent.window.location.reload()")
     # Create a wide map object
     folium_map = folium.Map(location=[39, 35.5], zoom_start=6)
