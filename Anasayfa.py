@@ -4,7 +4,8 @@ from streamlit_folium import st_folium
 from streamlit_js_eval import streamlit_js_eval
 # Setting Streamlit page configuration
 st.set_page_config(
-    page_title="UrClimate",
+    page_title="UrClimate İklim Risk Takip",
+    page_icon="🌎",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
