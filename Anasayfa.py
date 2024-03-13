@@ -45,15 +45,15 @@ def main():
 
     # Define locations, labels, and page URLs
     locations = [
-        (41.269758, 28.74381, 'Havalimanı',  '/HAVALIMANI', 'icons/airport.png'),
-        (39.433, 29.9878, 'Fabrika','/FABRIKA', 'icons/factory.png'),
-        (37.887, 36.962, 'HES',  '/HES','icons/hydro-power.png'),
+        (41.269758, 28.74381, 'Havalimanı',  '/HAVALIMANI', 'airport.png'),
+        (39.433, 29.9878, 'Fabrika','/FABRIKA', 'factory.png'),
+        (37.887, 36.962, 'HES',  '/HES','hydro-power.png'),
         # Add more locations with respective icons
     ]
 
     # Add markers to the map
     for lat, lon, label, page_url, icon in locations:
-        icon_path = f"C:/Users\hp\Desktop\map_app/icons/{icon}"  # Assuming icons are stored in a folder named 'icons'
+        icon_path = f"icons/{icon}"  # Assuming icons are stored in a folder named 'icons'
         popup_content =  f"""
     <div style="text-align: center;">
         <h4 style="font-weight: bold;">{label}</h4>
