@@ -90,7 +90,7 @@ yagis_yıl_2046_2049 = yıllık_ortalama_yagis.loc['2024':'2049'].mean()
 yagis_fark = yagis_yıl_2046_2049 - yagis_yıl_2020_2023
 
 
-col2.metric("Yıllık Ort. Yağış", f"{yagis_yıl_2046_2049[0].round(2)} mm", yagis_fark[0].round(2))
+col2.metric("Yıllık Ort. Yağış", f"🌧️{yagis_yıl_2046_2049[0].round(2)} mm", yagis_fark[0].round(2))
 
 kar['date'] = pd.to_datetime(kar['date'])
 yıllık_ortalama_kar = kar.groupby(kar['date'].dt.year)['snowfall_sum'].mean().reset_index()
@@ -103,7 +103,7 @@ kar_yıl_2046_2049 = yıllık_ortalama_kar.loc['2024':'2049'].mean()
 # Farkı hesapla
 kar_fark = kar_yıl_2046_2049 - kar_yıl_2020_2023
 
-col3.metric("Yıllık Ort. Kar Yağışı", f"{kar_yıl_2046_2049[0].round(2)} cm", kar_fark[0].round(2))
+col3.metric("Yıllık Ort. Kar Yağışı", f"❄️{kar_yıl_2046_2049[0].round(2)} cm", kar_fark[0].round(2))
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Sıcaklık", "Yağış", "Kar Yağışı","Debi Tahmini","Kuraklık"])
 
 with tab1:
