@@ -34,7 +34,7 @@ def main():
     col1, col2 = st.columns([0.1,0.9], gap="medium")
 
     with col1:
-        st.image('https://urclimate.com/wp-content/uploads/2023/12/LOGO_UrClimate_4-1.png', width=180)
+        st.image('https://urclimate.com/wp-content/uploads/2023/12/LOGO_UrClimate_4-1.png', width=170)
     
     with col2:
         st.title('UrClimate İklim Risk Takip Ekranı', anchor=False)
