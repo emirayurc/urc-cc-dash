@@ -46,7 +46,7 @@ def main():
     # Define locations, labels, and page URLs
     locations = [
         (41.269758, 28.74381, 'Havalimanı',  '/HAVALIMANI', 'airport.png'),
-        (39.433, 29.9878, 'Fabrika','/FABRIKA', 'factory.png'),
+        (39.433, 29.9878, 'Fabrika','', 'factory.png'),
         (37.887, 36.962, 'HES',  '/HES','hydro-power.png'),
         # Add more locations with respective icons
     ]
