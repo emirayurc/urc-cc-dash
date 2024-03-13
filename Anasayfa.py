@@ -42,7 +42,7 @@ def main():
         if st.button("Haritaya Geri Dön"):
             streamlit_js_eval(js_expressions="parent.window.location.reload()")
     # Create a wide map object
-    folium_map = folium.Map(location=[39, 35.5], zoom_start=6,use_container_width=True)
+    folium_map = folium.Map(location=[39, 35.5], zoom_start=6)
 
     # Define locations, labels, and page URLs
     locations = [
@@ -85,7 +85,7 @@ def main():
         ).add_to(folium_map)
 
     # Stream the map
-    st_folium(folium_map, width=1800, height=700)
+    st_folium(folium_map, use_container_width=True)
 
 if __name__ == "__main__":
     main()
