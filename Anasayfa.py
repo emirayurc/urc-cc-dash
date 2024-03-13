@@ -58,7 +58,7 @@ def main():
         popup_content =  f"""
     <div style="text-align: center;">
         <h4 style="font-weight: bold;">{label}</h4>
-        <a href="#" onclick="window.location.href = '{page_url}'; return false;" style="text-decoration: none;">
+         <a href="#" onclick="window.open('{page_url}'); return false;" style="text-decoration: none;">
             <button style="background-color: #abdbe3;
                             border: none;
                             color: black;
