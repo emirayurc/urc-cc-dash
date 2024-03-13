@@ -36,7 +36,7 @@ def main():
         st.image('https://urclimate.com/wp-content/uploads/2023/12/LOGO_UrClimate_4-1.png', width=130)
     
     with col2:
-        st.title('UrClimate İklim Risk Demo Dashboard', anchor=False)
+        st.title('UrClimate İklim Risk Takip Ekranı', anchor=False)
     
     # Create a wide map object
     folium_map = folium.Map(location=[39, 35.5], zoom_start=6)
